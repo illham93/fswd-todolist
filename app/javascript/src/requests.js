@@ -6,22 +6,18 @@ $.ajaxSetup({
     }
 });
 
-var indexTasks = function () {
+export var indexTasks = function (successCB, errorCB) {
     var request = {
         type: 'GET',
         url: 'api/tasks?api_key=2',
-        success: function (response) {
-            console.log(response);
-        },
-        error: function (request, errorMsg) {
-            console.log(request, errorMsg);
-        }
+        success: successCB,
+        error: errorCB
     }
 
     $.ajax(request);
 };
 
-var postTask = function (content) {
+export var postTask = function (content, successCB, errorCB) {
     var request = {
         type: 'POST',
         url: 'api/tasks?api_key=2',
@@ -30,12 +26,8 @@ var postTask = function (content) {
                 content: content
             }
         },
-        success: function (response) {
-            console.log(response);
-        },
-        error: function (request, errorMsg) {
-            console.log(request, errorMsg);
-        }
+        success: successCB,
+        error: errorCB
     }
 
     $.ajax(request);
