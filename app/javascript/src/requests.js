@@ -20,7 +20,7 @@ export var indexTasks = function (successCB, errorCB) {
 export var postTask = function (content, successCB, errorCB) {
     var request = {
         type: 'POST',
-        url: 'api/tasks?api_key=2',
+        url: 'api/tasks',
         data: {
             task: {
                 content: content
