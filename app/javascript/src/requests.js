@@ -1,4 +1,4 @@
-import $ from 'jquery';
+import $, { error } from 'jquery';
 
 var api_key = 2;
 
@@ -39,6 +39,28 @@ export var deleteTask = function (taskId, successCB, errorCB) {
     var request = {
         type: 'DELETE',
         url: 'api/tasks/' + taskId + '?api_key=' + api_key,
+        success: successCB,
+        error: errorCB
+    }
+
+    $.ajax(request);
+}
+
+export var markComplete = function (taskId, successCB, errorCB) {
+    var request = {
+        type: 'PUT',
+        url: 'api/tasks/' + taskId + '/mark_complete?api_key=' + api_key,
+        success: successCB,
+        error: errorCB
+    }
+
+    $.ajax(request);
+}
+
+export var markActive = function (taskId, successCB, errorCB) {
+    var request = {
+        type: 'PUT',
+        url: 'api/tasks/' + taskId + '/mark_active?api_key=' + api_key,
         success: successCB,
         error: errorCB
     }
