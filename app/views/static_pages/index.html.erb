@@ -3,15 +3,19 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <h1 class="text-center mt-4">To Do List</h1>
-            <div class="row" id="tasks"></div>
+            <h1 class="text-center mt-2 mb-4"><strong>To Do List</strong></h1>
         </div>
     </div>
+    <div class="row" id="tasks"></div>
     <div class="row">
         <div class="col-12">
             <form id="add-new-task">
-                <input id="task-content">
-                <button id="submit-new-task" type="submit">Add</button>
+                <div class="input-group">
+                    <input id="task-content" type="text" class="form-control" placeholder="New Task">
+                    <div class="input-group-append">
+                        <button id="submit-new-task" class="btn btn-outline-secondary" type="submit">Add</button>
+                    </div>
+                </div>
             </form>
         </div>
     </div>

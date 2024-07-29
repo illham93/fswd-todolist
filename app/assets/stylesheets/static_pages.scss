@@ -1,3 +1,24 @@
 // Place all the styles related to the StaticPages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+html, body {
+    height: 100%;
+}
+
+.static_pages.index {
+    background: radial-gradient(rgba(0, 247, 255, 0.25), rgb(0, 136, 255));
+    font-family: Roboto;
+
+    .container {
+        background-color: white;
+        border-radius: 20px;
+        box-shadow: 10px 10px 8px rgb(50, 50, 50);
+        margin: 0 auto;
+        margin-top: 50px;
+        max-width: 600px;
+        padding: 25px;
+    }
+
+
+}
