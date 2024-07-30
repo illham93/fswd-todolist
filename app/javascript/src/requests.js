@@ -1,6 +1,6 @@
 import $, { error } from 'jquery';
 
-var api_key = 2;
+var api_key = 1;
 
 $.ajaxSetup({
     headers: {
